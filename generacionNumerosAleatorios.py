@@ -90,4 +90,60 @@ def numeroPoisson(lambd):
         p = p * rnd
         x += 1
     return x
+#GENERACION DE VARIABLES CON EL METODO DE CONGRUENCIA LINEAL
+def numeroCongruenciaLineal(seed,k,c,g):
+    if g < 0:
+        raise ValueError("El valor de g debe ser positivo.")
+    elif k < 0:
+        raise ValueError("El valor de k debe ser positivo.")
+    mod = 2**g
+    if m.gcd(c,mod) != 1:
+        raise ValueError("Los valores de c y m deben ser relativamente primos")
+    N = mod
+    a = 1+4*k
+    rnd = []
+    x = []
+    for i in range(N):
+        if i==0:
+            b = a*seed + c
+            x_i = b % mod
+            x.append(x_i)
+        else:
+            r = x[i-1] / (mod-1)
+            rnd.append(r)
+            b = a*x[i-1] + c
+            x_i = b % mod
+            x.append(x_i)
+    v = x[N -1] / (mod - 1)
+    rnd.append(v)
+    return rnd,x
+#GENERACION DE VARIABLES CON EL METODO CONGRUENCIAL MULTIPLICATIVO
+def numeroCongruencialMultiplicativo(seed,k,g):
+    if seed % 2 == 0:
+        raise ValueError("La semilla debe ser impar")
+    elif k<0 and type(k) != int:
+        raise ValueError("EL valor de k debe ser un entero positivo")
+    elif g < 0 and type(g) != int:
+        raise ValueError("El numero g debe ser un entero positivo")
+    mod = 2**g
+    a = 3 + 8*k
+    N = 2**(g-2)
+    rnd = []
+    x = []
+    for i in range(N):
+        if i == 0:
+            b = a * seed
+            x_i = b % mod
+            x.append(x_i)
+        else:
+            y = x[i-1] / (mod - 1)
+            rnd.append(y)
+            b = a * x[i-1]
+            x_i = b % mod
+            x.append(x_i)
+    z = x[N-1] / (mod - 1)
+    rnd.append(z)
+    return rnd,x
+
+
         
