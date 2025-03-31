@@ -91,7 +91,3 @@ def numeroPoisson(lambd):
         x += 1
     return x
         
-lambd = float(Fraction(5,60))
-print(m.exp(-lambd))
-x = numeroPoisson(lambd)
-print(x)
