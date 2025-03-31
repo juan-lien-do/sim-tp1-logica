@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "generacionNumerosAleatorios"
+version = "0.1"
+description = "Libreria que permite generar numeros pseudoaleatorios, con las diferentes distribuciones"
+authors = [{ name = "Grupo 13 de Simulacion 4K1"}]
+license = { file = "LICENSE" }
+readme = "README.md"
+dependencies = []

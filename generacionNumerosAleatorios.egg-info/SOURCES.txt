@@ -1,0 +1,8 @@
+LICENSE
+README.md
+generacionNumerosAleatorios.py
+pyproject.toml
+generacionNumerosAleatorios.egg-info/PKG-INFO
+generacionNumerosAleatorios.egg-info/SOURCES.txt
+generacionNumerosAleatorios.egg-info/dependency_links.txt
+generacionNumerosAleatorios.egg-info/top_level.txt

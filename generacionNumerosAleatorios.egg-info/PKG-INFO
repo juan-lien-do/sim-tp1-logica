@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: generacionNumerosAleatorios
+Version: 0.1
+Summary: Libreria que permite generar numeros pseudoaleatorios, con las diferentes distribuciones
+Author: Grupo 13 de Simulacion 4K1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
