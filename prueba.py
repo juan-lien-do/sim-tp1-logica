@@ -27,7 +27,7 @@ for i in range(len(valores)):
             x4.append(n1)
             x4.append(n2)
 #print(x4)
-x5 = generacionNumerosAleatorios.numeroNormalConvolucion(11,0.3,valores)
+x5 = generacionNumerosAleatorios.numeroNormalConvolucion(11,0.3,12,valores)
 print(x5)
 #rnd = [0.15, 0.22, 0.41, 0.65, 0.84, 0.81, 0.62, 0.45, 0.32, 0.07, 0.11, 0.29, 0.58, 0.73, 0.93, 0.97, 0.79, 0.55, 0.35, 0.09, 0.99, 0.51, 0.35, 0.02, 0.19, 0.24, 0.98, 0.10, 0.31, 0.17]
 #obs,esp,c,x,x_2 = testPruebaChiCuadrado(rnd,0.05)

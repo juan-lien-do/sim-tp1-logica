@@ -41,9 +41,11 @@ def numerosNormalBoxMuller(media, des, rnd1=None, rnd2=None):
         raise ValueError("La desviacion estandar no puede ser cero o negativa")
     
 
-    if rnd1 is None or rnd2 is None:
-        rnd1 = rnd1 or r.random()
-        rnd2 = rnd2 or r.random()
+    if rnd1 is None:
+        rnd1 = r.random()
+    if rnd2 is None:
+        rnd2 = r.random()
+
 
 
     if not (0 <= rnd1 <= 1):
@@ -51,8 +53,8 @@ def numerosNormalBoxMuller(media, des, rnd1=None, rnd2=None):
     if not (0 <= rnd2 <= 1):
         raise ValueError("El valor de RND2 debe estar entre 0 y 1")
 
-    z1 = m.sqrt(-2 * m.log(rnd1)) * m.cos(2 * m.pi * rnd2)
-    z2 = m.sqrt(-2 * m.log(rnd1)) * m.sin(2 * m.pi * rnd2)
+    z1 = m.sqrt(-2 * m.log(1-rnd1)) * m.cos(2 * m.pi * rnd2)
+    z2 = m.sqrt(-2 * m.log(1-rnd1)) * m.sin(2 * m.pi * rnd2)
 
     n1 = round((z1 * des + media),4)
     n2 = round((z2 * des + media),4)
